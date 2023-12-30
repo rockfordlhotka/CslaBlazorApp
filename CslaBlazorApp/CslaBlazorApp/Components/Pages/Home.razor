@@ -1,0 +1,42 @@
+﻿@page "/"
+@inject Csla.ApplicationContext ApplicationContext
+@inject Csla.Blazor.State.StateManager StateManager
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<p>MyValue @MyValue</p>
+
+Welcome to your new app.
+
+@code
+{
+    private string? MyValue;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await StateManager.Initialize();
+        InitializeStateAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await StateManager.AfterRender(firstRender);
+        InitializeStateAsync();
+    }
+
+    private void InitializeStateAsync()
+    {
+        if (StateManager.IsStateAvailable)
+        {
+            var aValue = ApplicationContext.LocalContext["test"];
+            if (aValue == null)
+            {
+                ApplicationContext.LocalContext["test"] = "42";
+                aValue = ApplicationContext.LocalContext["test"];
+            }
+            MyValue = aValue?.ToString();
+        }
+    }
+}
