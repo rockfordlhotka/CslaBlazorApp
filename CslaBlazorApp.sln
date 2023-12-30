@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34407.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaBlazorApp", "CslaBlazorApp\CslaBlazorApp\CslaBlazorApp.csproj", "{8FED611B-E4BD-4B49-9267-E59FD84307B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaBlazorApp.Client", "CslaBlazorApp\CslaBlazorApp.Client\CslaBlazorApp.Client.csproj", "{36B6BBCD-75CC-4DE6-A0BF-6E6CE2F57FBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csla", "..\rdl\csla\Source\Csla\Csla.csproj", "{64750335-F026-4B27-A174-5A75925434B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csla.AspNetCore", "..\rdl\csla\Source\Csla.AspNetCore\Csla.AspNetCore.csproj", "{487EC3C8-BEB1-4FED-B62A-9653F4572E88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csla.Blazor", "..\rdl\csla\Source\Csla.Blazor\Csla.Blazor.csproj", "{41BC0CE7-C660-499E-B930-81F189726438}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csla.Blazor.WebAssembly", "..\rdl\csla\Source\Csla.Blazor.WebAssembly\Csla.Blazor.WebAssembly.csproj", "{BB675808-9A0B-4EA2-BA13-D3D4868924DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FED611B-E4BD-4B49-9267-E59FD84307B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FED611B-E4BD-4B49-9267-E59FD84307B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FED611B-E4BD-4B49-9267-E59FD84307B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FED611B-E4BD-4B49-9267-E59FD84307B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B6BBCD-75CC-4DE6-A0BF-6E6CE2F57FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B6BBCD-75CC-4DE6-A0BF-6E6CE2F57FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B6BBCD-75CC-4DE6-A0BF-6E6CE2F57FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B6BBCD-75CC-4DE6-A0BF-6E6CE2F57FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64750335-F026-4B27-A174-5A75925434B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64750335-F026-4B27-A174-5A75925434B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64750335-F026-4B27-A174-5A75925434B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64750335-F026-4B27-A174-5A75925434B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487EC3C8-BEB1-4FED-B62A-9653F4572E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487EC3C8-BEB1-4FED-B62A-9653F4572E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487EC3C8-BEB1-4FED-B62A-9653F4572E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487EC3C8-BEB1-4FED-B62A-9653F4572E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41BC0CE7-C660-499E-B930-81F189726438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41BC0CE7-C660-499E-B930-81F189726438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41BC0CE7-C660-499E-B930-81F189726438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41BC0CE7-C660-499E-B930-81F189726438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB675808-9A0B-4EA2-BA13-D3D4868924DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB675808-9A0B-4EA2-BA13-D3D4868924DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB675808-9A0B-4EA2-BA13-D3D4868924DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB675808-9A0B-4EA2-BA13-D3D4868924DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BD5B56C-6876-4040-8659-CD390B34CB94}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\rdl\csla\Source\Csla.Web.Mvc.Shared\Csla.Web.Mvc.Shared.projitems*{487ec3c8-beb1-4fed-b62a-9653f4572e88}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

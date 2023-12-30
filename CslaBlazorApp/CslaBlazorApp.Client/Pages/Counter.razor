@@ -1,0 +1,53 @@
+﻿@page "/counter"
+@inject Csla.ApplicationContext ApplicationContext
+@inject Csla.Blazor.State.StateManager StateManager
+@rendermode InteractiveAuto
+@implements IDisposable
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p>MyValue @MyValue</p>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    private string? MyValue;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await StateManager.Initialize();
+        InitializeStateAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await StateManager.AfterRender(firstRender);
+        InitializeStateAsync();
+        if (firstRender)
+            StateHasChanged();
+    }
+
+    protected void InitializeStateAsync()
+    {
+        if (StateManager.IsStateAvailable)
+        {
+            var aValue = ApplicationContext.LocalContext["test"];
+            MyValue = aValue?.ToString();
+        }
+    }
+
+    public void Dispose()
+    {
+        StateManager.SaveState();
+    }
+}
