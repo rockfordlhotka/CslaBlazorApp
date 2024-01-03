@@ -25,7 +25,6 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddScoped(typeof(Csla.Core.IContextManager), typeof(Csla.AspNetCore.Blazor.ApplicationContextManagerBlazor));
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddCsla(opt => opt
     .AddAspNetCore()
