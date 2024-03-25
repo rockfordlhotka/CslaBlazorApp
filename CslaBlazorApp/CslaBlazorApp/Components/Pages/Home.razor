@@ -1,5 +1,4 @@
 ﻿@page "/"
-@attribute [StreamRendering]
 @inject Csla.ApplicationContext ApplicationContext
 @inject Csla.Blazor.State.StateManager StateManager
 @inject Csla.State.ISessionManager SessionManager
@@ -10,11 +9,6 @@
 
 <p>MyValue @MyValue</p>
 
-@if (StateManager.IsStateAvailable)
-{
-    <p>Session @SessionManager.GetSession().Id</p>
-}
-
 Welcome to your new app.
 
 @code
@@ -24,15 +18,13 @@ Welcome to your new app.
     protected override async Task OnInitializedAsync()
     {
         await StateManager.InitializeAsync();
-        if (StateManager.IsStateAvailable)
+        var aValue = ApplicationContext.LocalContext["test"];
+        if (aValue == null)
         {
-            var aValue = ApplicationContext.LocalContext["test"];
-            if (aValue == null)
-            {
-                ApplicationContext.LocalContext["test"] = "42";
-                aValue = ApplicationContext.LocalContext["test"];
-            }
-            MyValue = aValue?.ToString();
+            ApplicationContext.LocalContext["test"] = "42";
+            StateManager.SaveState();
+            aValue = ApplicationContext.LocalContext["test"];
         }
+        MyValue = aValue?.ToString();
     }
 }

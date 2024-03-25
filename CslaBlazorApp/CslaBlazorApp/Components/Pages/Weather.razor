@@ -10,8 +10,6 @@
 
 <p>MyValue @MyValue</p>
 
-<p>Session @SessionManager.GetSession().Id</p>
-
 <p>This component demonstrates showing data.</p>
 
 @if (forecasts == null)
@@ -50,11 +48,8 @@ else
     protected override async Task OnInitializedAsync()
     {
         await StateManager.InitializeAsync();
-        if (StateManager.IsStateAvailable)
-        {
-            var aValue = ApplicationContext.LocalContext["test"];
-            MyValue = aValue?.ToString();
-        }
+        var aValue = ApplicationContext.LocalContext["test"];
+        MyValue = aValue?.ToString();
 
         // Simulate asynchronous loading to demonstrate streaming rendering
         await Task.Delay(500);
